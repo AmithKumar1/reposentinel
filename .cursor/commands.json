@@ -1,0 +1,62 @@
+{
+  "name": "Qwen PR Auto-Submit",
+  "description": "Automatically submit and monitor PRs to Karpathy's autoresearch using Qwen",
+  "version": "1.0.0",
+  "commands": [
+    {
+      "name": "submit-pr1",
+      "description": "Submit PR #1: Mixed Precision Training (2x speedup)",
+      "script": "bash scripts/qwen-submit.sh --pr1",
+      "icon": "rocket"
+    },
+    {
+      "name": "submit-pr2",
+      "description": "Submit PR #2: LR Scheduling",
+      "script": "bash scripts/qwen-submit.sh --pr2",
+      "icon": "schedule"
+    },
+    {
+      "name": "submit-pr3",
+      "description": "Submit PR #3: Experiment Logging",
+      "script": "bash scripts/qwen-submit.sh --pr3",
+      "icon": "note"
+    },
+    {
+      "name": "submit-all",
+      "description": "Submit all PRs at once",
+      "script": "bash scripts/qwen-submit.sh --all",
+      "icon": "check-all"
+    },
+    {
+      "name": "check-status",
+      "description": "Check PR status and responses",
+      "script": "bash scripts/qwen-submit.sh --status",
+      "icon": "visibility"
+    },
+    {
+      "name": "set-reminders",
+      "description": "Set up PR monitoring reminders",
+      "script": "bash scripts/qwen-submit.sh --remind",
+      "icon": "alarm"
+    }
+  ],
+  "keybindings": {
+    "submit-pr1": "Ctrl+Alt+1",
+    "submit-pr2": "Ctrl+Alt+2",
+    "submit-pr3": "Ctrl+Alt+3",
+    "check-status": "Ctrl+Alt+S"
+  },
+  "context_menu": {
+    "enabled": true,
+    "items": [
+      {
+        "label": "Submit PR #1",
+        "command": "submit-pr1"
+      },
+      {
+        "label": "Check PR Status",
+        "command": "check-status"
+      }
+    ]
+  }
+}

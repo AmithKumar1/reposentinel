@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# ============================================================================
+# Qwen Auto-Submit - One Liner for Cursor
+# ============================================================================
+# Usage in Cursor terminal:
+#   qwen submit pr1
+#   qwen check status
+#   qwen remind me
+# ============================================================================
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(dirname "$SCRIPT_DIR")"
+AUTORESEARCH_DIR="$REPO_DIR/../autoresearch"
+
+# Ensure scripts are executable
+chmod +x "$SCRIPT_DIR"/*.sh 2>/dev/null
+
+# Parse command
+ACTION="${1:-help}"
+SUBACTION="${2:-}"
+
+case "$ACTION" in
+    submit)
+        case "$SUBACTION" in
+            pr1|1) bash "$SCRIPT_DIR/qwen-submit.sh" --pr1 ;;
+            pr2|2) bash "$SCRIPT_DIR/qwen-submit.sh" --pr2 ;;
+            pr3|3) bash "$SCRIPT_DIR/qwen-submit.sh" --pr3 ;;
+            all) bash "$SCRIPT_DIR/qwen-submit.sh" --all ;;
+            *) echo "Usage: qwen submit [pr1|pr2|pr3|all]" ;;
+        esac
+        ;;
+    check)
+        case "$SUBACTION" in
+            status|pr) bash "$SCRIPT_DIR/qwen-submit.sh" --status ;;
+            *) bash "$SCRIPT_DIR/qwen-submit.sh" --status ;;
+        esac
+        ;;
+    remind|reminder)
+        bash "$SCRIPT_DIR/qwen-submit.sh" --remind
+        ;;
+    help|--help|-h)
+        echo "Qwen Auto-Submit for RepoSentinel PRs"
+        echo ""
+        echo "Usage: qwen [action] [option]"
+        echo ""
+        echo "Actions:"
+        echo "  submit pr1    → Submit PR #1 (Mixed Precision) ✅ Ready"
+        echo "  submit pr2    → Submit PR #2 (LR Scheduling)"
+        echo "  submit pr3    → Submit PR #3 (Experiment Logging)"
+        echo "  submit all    → Submit all PRs"
+        echo "  check status  → Check PR status"
+        echo "  remind me     → Set up reminders"
+        echo "  help          → Show this help"
+        echo ""
+        echo "Examples:"
+        echo "  qwen submit pr1"
+        echo "  qwen check status"
+        echo "  qwen remind me"
+        ;;
+    *)
+        # Interactive mode
+        bash "$SCRIPT_DIR/qwen-submit.sh"
+        ;;
+esac
