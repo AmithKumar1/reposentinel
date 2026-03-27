@@ -93,7 +93,36 @@ Current tools **tell you** what's wrong. RepoSentinel **fixes it for you**.
 
 ![Architecture Diagram](assets/architecture.svg)
 
+*Figure 1: System architecture showing autonomous PR workflow*
+
 </div>
+
+### Advanced AI/ML Engine
+
+<div align="center">
+
+![ML Algorithms](assets/ml-algorithms.svg)
+
+*Figure 2: Advanced mathematical & statistical algorithms powering RepoSentinel*
+
+</div>
+
+RepoSentinel isn't just an LLM wrapper - it uses **cutting-edge machine learning algorithms**:
+
+| Algorithm | Mathematical Foundation | Application |
+|-----------|------------------------|-------------|
+| **Graph Neural Network** | Graph Convolution + Attention | Code structure understanding, risk prediction |
+| **Statistical Anomaly Detection** | Mahalanobis Distance, ESD Test, Grubbs' Test | Bug detection, outlier identification |
+| **Causal Inference Engine** | Structural Causal Models, Do-Calculus, Backdoor Adjustment | Root cause analysis, impact estimation |
+| **Multi-Objective Optimization** | NSGA-II, Pareto Fronts | Campaign planning (risk vs impact tradeoff) |
+| **Bayesian Preference Learning** | MCMC Sampling, Posterior Inference | Learns team's code style from PR feedback |
+| **Contrastive Learning** | InfoNCE Loss, SimCLR | Code embeddings for semantic search |
+| **Time-Series Forecasting** | ARIMA, Prophet, LSTM | Predicts tech debt accumulation |
+| **Symbolic Reasoning** | First-Order Logic, Datalog | Program analysis, invariant detection |
+| **Genetic Algorithms** | Evolution Strategies, Crossover | Automated refactoring optimization |
+| **Information Theory** | Entropy, Mutual Information | Code complexity metrics |
+| **Reinforcement Learning** | PPO, Multi-Armed Bandit | Campaign strategy optimization |
+| **Federated Learning** | Federated Averaging | Multi-repo pattern learning (privacy-preserving) |
 
 ### Core Components
 

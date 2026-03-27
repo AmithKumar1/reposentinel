@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27"/>
+      <stop offset="50%" style="stop-color:#1a1f3a"/>
+      <stop offset="100%" style="stop-color:#2d1b4e"/>
+    </linearGradient>
+    <linearGradient id="gnnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f5ff"/>
+      <stop offset="100%" style="stop-color:#0099ff"/>
+    </linearGradient>
+    <linearGradient id="statsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00ff"/>
+      <stop offset="100%" style="stop-color:#9900ff"/>
+    </linearGradient>
+    <linearGradient id="causalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff99"/>
+      <stop offset="100%" style="stop-color:#00cc66"/>
+    </linearGradient>
+    <linearGradient id="optimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffaa00"/>
+      <stop offset="100%" style="stop-color:#ff6600"/>
+    </linearGradient>
+    <linearGradient id="bayesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6666"/>
+      <stop offset="100%" style="stop-color:#cc0066"/>
+    </linearGradient>
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="neonArrow" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto">
+      <polygon points="0 0, 12 5, 0 10" fill="#00f5ff"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1600" height="1200" fill="url(#bgGrad)"/>
+  
+  <!-- Animated grid -->
+  <g opacity="0.1">
+    <defs>
+      <pattern id="techGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+        <circle cx="25" cy="25" r="1" fill="#00f5ff"/>
+        <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#00f5ff" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="1600" height="1200" fill="url(#techGrid)"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="800" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="url(#neonGlow)">
+    🧠 RepoSentinel AI Engine
+  </text>
+  <text x="800" y="85" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#a0a0ff" text-anchor="middle">
+    Advanced Mathematical &amp; Statistical Algorithms for Autonomous Code Analysis
+  </text>
+  
+  <!-- Central Brain Visualization -->
+  <g transform="translate(800, 350)">
+    <!-- Core AI Engine -->
+    <circle r="120" fill="url(#gnnGrad)" opacity="0.1" filter="url(#neonGlow)"/>
+    <circle r="100" fill="url(#gnnGrad)" opacity="0.2"/>
+    <circle r="80" fill="url(#gnnGrad)" opacity="0.3"/>
+    <circle r="60" fill="url(#gnnGrad)" opacity="0.5"/>
+    <circle r="40" fill="#ffffff" opacity="0.8"/>
+    
+    <text x="0" y="-10" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="bold" fill="#000066" text-anchor="middle">AI CORE</text>
+    <text x="0" y="15" font-family="'Consolas', monospace" font-size="10" fill="#000066" text-anchor="middle">GNN + ML</text>
+  </g>
+  
+  <!-- Algorithm Modules arranged in circle -->
+  
+  <!-- 1. Graph Neural Network (Top Left) -->
+  <g transform="translate(250, 200)">
+    <rect x="-120" y="-80" width="240" height="160" rx="16" fill="#0a0e27" stroke="url(#gnnGrad)" stroke-width="3" filter="url(#neonGlow)"/>
+    <text x="0" y="-50" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#00f5ff" text-anchor="middle">🕸️ Graph Neural Network</text>
+    
+    <!-- GNN Architecture mini diagram -->
+    <g transform="translate(-80, -20)">
+      <circle cx="0" cy="0" r="15" fill="#00f5ff" opacity="0.3"/>
+      <circle cx="40" cy="0" r="15" fill="#00f5ff" opacity="0.3"/>
+      <circle cx="80" cy="0" r="15" fill="#00f5ff" opacity="0.3"/>
+      <line x1="15" y1="0" x2="25" y2="0" stroke="#00f5ff" stroke-width="2"/>
+      <line x1="55" y1="0" x2="65" y2="0" stroke="#00f5ff" stroke-width="2"/>
+      <text x="40" y="40" font-family="'Consolas', monospace" font-size="9" fill="#a0d0ff" text-anchor="middle">Message Passing</text>
+    </g>
+    
+    <text x="0" y="30" font-family="'Consolas', monospace" font-size="10" fill="#80c0ff" text-anchor="middle">h_v^(l+1) = σ(Σ α_{vu} W h_u^(l))</text>
+    <text x="0" y="50" font-family="'Consolas', monospace" font-size="9" fill="#60a0ff" text-anchor="middle">• Code structure embeddings</text>
+    <text x="0" y="65" font-family="'Consolas', monospace" font-size="9" fill="#60a0ff" text-anchor="middle">• Risk prediction (GAT)</text>
+  </g>
+  
+  <!-- 2. Statistical Anomaly Detection (Top Right) -->
+  <g transform="translate(1350, 200)">
+    <rect x="-120" y="-80" width="240" height="160" rx="16" fill="#0a0e27" stroke="url(#statsGrad)" stroke-width="3" filter="url(#neonGlow)"/>
+    <text x="0" y="-50" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff00ff" text-anchor="middle">📊 Statistical Anomaly Detection</text>
+    
+    <!-- Statistical tests list -->
+    <text x="-100" y="-20" font-family="'Consolas', monospace" font-size="9" fill="#ff80ff">Z-Score Test</text>
+    <text x="0" y="-20" font-family="'Consolas', monospace" font-size="9" fill="#ff80ff">IQR Test</text>
+    <text x="100" y="-20" font-family="'Consolas', monospace" font-size="9" fill="#ff80ff">Grubbs' Test</text>
+    
+    <text x="0" y="10" font-family="'Consolas', monospace" font-size="10" fill="#ff80ff" text-anchor="middle">D² = (x - μ)^T Σ^(-1) (x - μ)</text>
+    <text x="0" y="35" font-family="'Consolas', monospace" font-size="9" fill="#ff80ff" text-anchor="middle">• Mahalanobis Distance</text>
+    <text x="0" y="50" font-family="'Consolas', monospace" font-size="9" fill="#ff80ff" text-anchor="middle">• ESD Test (multiple outliers)</text>
+    <text x="0" y="65" font-family="'Consolas', monospace" font-size="9" fill="#ff80ff" text-anchor="middle">• Ensemble p-value (Fisher's)</text>
+  </g>
+  
+  <!-- 3. Causal Inference Engine (Middle Left) -->
+  <g transform="translate(250, 500)">
+    <rect x="-120" y="-80" width="240" height="160" rx="16" fill="#0a0e27" stroke="url(#causalGrad)" stroke-width="3" filter="url(#neonGlow)"/>
+    <text x="0" y="-50" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#00ff99" text-anchor="middle">🔗 Causal Inference Engine</text>
+    
+    <!-- Causal graph mini -->
+    <g transform="translate(-60, -20)">
+      <circle cx="0" cy="0" r="12" fill="#00ff99" opacity="0.4"/>
+      <circle cx="60" cy="30" r="12" fill="#00ff99" opacity="0.4"/>
+      <circle cx="60" cy="-30" r="12" fill="#00ff99" opacity="0.4"/>
+      <line x1="10" y1="5" x2="50" y2="25" stroke="#00ff99" stroke-width="2" marker-end="url(#neonArrow)"/>
+      <line x1="10" y1="-5" x2="50" y2="-25" stroke="#00ff99" stroke-width="2" marker-end="url(#neonArrow)"/>
+    </g>
+    
+    <text x="0" y="20" font-family="'Consolas', monospace" font-size="10" fill="#80ffcc" text-anchor="middle">P(Y | do(X)) = Σ_z P(Y|X,Z)P(Z)</text>
+    <text x="0" y="45" font-family="'Consolas', monospace" font-size="9" fill="#60ffaa" text-anchor="middle">• Backdoor adjustment</text>
+    <text x="0" y="60" font-family="'Consolas', monospace" font-size="9" fill="#60ffaa" text-anchor="middle">• Granger causality test</text>
+    <text x="0" y="75" font-family="'Consolas', monospace" font-size="9" fill="#60ffaa" text-anchor="middle">• Root cause analysis</text>
+  </g>
+  
+  <!-- 4. Multi-Objective Optimization (Middle Right) -->
+  <g transform="translate(1350, 500)">
+    <rect x="-120" y="-80" width="240" height="160" rx="16" fill="#0a0e27" stroke="url(#optimGrad)" stroke-width="3" filter="url(#neonGlow)"/>
+    <text x="0" y="-50" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffaa00" text-anchor="middle">🎯 Multi-Objective Optimization</text>
+    
+    <!-- Pareto front visualization -->
+    <g transform="translate(-80, -20)">
+      <path d="M 0 60 L 20 40 L 40 30 L 60 25 L 80 20 L 120 15 L 140 0 L 160 0 L 160 60 Z" fill="#ffaa00" opacity="0.2"/>
+      <circle cx="20" cy="40" r="4" fill="#ffaa00"/>
+      <circle cx="60" cy="25" r="4" fill="#ffaa00"/>
+      <circle cx="120" cy="15" r="4" fill="#ffaa00"/>
+      <text x="80" y="75" font-family="'Consolas', monospace" font-size="9" fill="#ffcc80" text-anchor="middle">Pareto Front</text>
+    </g>
+    
+    <text x="0" y="45" font-family="'Consolas', monospace" font-size="9" fill="#ffcc80" text-anchor="middle">• NSGA-II algorithm</text>
+    <text x="0" y="60" font-family="'Consolas', monospace" font-size="9" fill="#ffcc80" text-anchor="middle">• Campaign planning</text>
+    <text x="0" y="75" font-family="'Consolas', monospace" font-size="9" fill="#ffcc80" text-anchor="middle">• Risk vs Impact tradeoff</text>
+  </g>
+  
+  <!-- 5. Bayesian Preference Learning (Bottom Left) -->
+  <g transform="translate(400, 850)">
+    <rect x="-120" y="-80" width="240" height="160" rx="16" fill="#0a0e27" stroke="url(#bayesGrad)" stroke-width="3" filter="url(#neonGlow)"/>
+    <text x="0" y="-50" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6666" text-anchor="middle">🎓 Bayesian Preference Learning</text>
+    
+    <!-- Bayesian network -->
+    <text x="0" y="-10" font-family="'Consolas', monospace" font-size="10" fill="#ff9999" text-anchor="middle">P(θ|D) ∝ P(D|θ)P(θ)</text>
+    
+    <text x="-100" y="20" font-family="'Consolas', monospace" font-size="9" fill="#ff9999">• Prior: Team style</text>
+    <text x="100" y="20" font-family="'Consolas', monospace" font-size="9" fill="#ff9999">• Likelihood: PR outcomes</text>
+    <text x="0" y="45" font-family="'Consolas', monospace" font-size="9" fill="#ff9999" text-anchor="middle">• Posterior: Updated preferences</text>
+    <text x="0" y="60" font-family="'Consolas', monospace" font-size="9" fill="#ff9999" text-anchor="middle">• MCMC sampling (PyMC)</text>
+    <text x="0" y="75" font-family="'Consolas', monospace" font-size="9" fill="#ff9999" text-anchor="middle">• Few-shot prompt generation</text>
+  </g>
+  
+  <!-- 6. Additional Algorithms (Bottom Right) -->
+  <g transform="translate(1200, 850)">
+    <rect x="-120" y="-80" width="240" height="160" rx="16" fill="#0a0e27" stroke="#00ff00" stroke-width="3" filter="url(#neonGlow)"/>
+    <text x="0" y="-50" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#00ff00" text-anchor="middle">⚡ Additional AI Engines</text>
+    
+    <text x="-100" y="-20" font-family="'Consolas', monospace" font-size="9" fill="#80ff80">Contrastive Learning</text>
+    <text x="100" y="-20" font-family="'Consolas', monospace" font-size="9" fill="#80ff80">Time-Series Forecast</text>
+    <text x="-100" y="5" font-family="'Consolas', monospace" font-size="9" fill="#80ff80">Symbolic Reasoning</text>
+    <text x="100" y="5" font-family="'Consolas', monospace" font-size="9" fill="#80ff80">Genetic Algorithms</text>
+    <text x="-100" y="30" font-family="'Consolas', monospace" font-size="9" fill="#80ff80">Info Theory Metrics</text>
+    <text x="100" y="30" font-family="'Consolas', monospace" font-size="9" fill="#80ff80">RL Campaign Plan</text>
+    <text x="0" y="55" font-family="'Consolas', monospace" font-size="9" fill="#80ff80" text-anchor="middle">• Federated Learning</text>
+    <text x="0" y="70" font-family="'Consolas', monospace" font-size="9" fill="#80ff80" text-anchor="middle">• Uncertainty Quantification</text>
+  </g>
+  
+  <!-- Data Flow Arrows -->
+  <path d="M 370 280 L 680 330" stroke="#00f5ff" stroke-width="2" stroke-dasharray="4" marker-end="url(#neonArrow)" opacity="0.6"/>
+  <path d="M 1230 280 L 920 330" stroke="#ff00ff" stroke-width="2" stroke-dasharray="4" marker-end="url(#neonArrow)" opacity="0.6"/>
+  <path d="M 370 580 L 680 400" stroke="#00ff99" stroke-width="2" stroke-dasharray="4" marker-end="url(#neonArrow)" opacity="0.6"/>
+  <path d="M 1230 580 L 920 400" stroke="#ffaa00" stroke-width="2" stroke-dasharray="4" marker-end="url(#neonArrow)" opacity="0.6"/>
+  <path d="M 520 800 L 750 450" stroke="#ff6666" stroke-width="2" stroke-dasharray="4" marker-end="url(#neonArrow)" opacity="0.6"/>
+  <path d="M 1080 800 L 850 450" stroke="#00ff00" stroke-width="2" stroke-dasharray="4" marker-end="url(#neonArrow)" opacity="0.6"/>
+  
+  <!-- Input/Output sections -->
+  
+  <!-- Input: Code Repository -->
+  <g transform="translate(150, 1100)">
+    <rect x="-100" y="-40" width="200" height="80" rx="12" fill="#0a0e27" stroke="#6666ff" stroke-width="2"/>
+    <text x="0" y="-10" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold" fill="#6666ff" text-anchor="middle">📦 Input: Code Repository</text>
+    <text x="0" y="15" font-family="'Consolas', monospace" font-size="9" fill="#8080ff" text-anchor="middle">AST + Git History + Metrics</text>
+  </g>
+  
+  <!-- Output: Autonomous PRs -->
+  <g transform="translate(1450, 1100)">
+    <rect x="-100" y="-40" width="200" height="80" rx="12" fill="#0a0e27" stroke="#00ff00" stroke-width="2" filter="url(#neonGlow)"/>
+    <text x="0" y="-10" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold" fill="#00ff00" text-anchor="middle">✅ Output: Autonomous PRs</text>
+    <text x="0" y="15" font-family="'Consolas', monospace" font-size="9" fill="#80ff80" text-anchor="middle">Security • Refactor • Performance</text>
+  </g>
+  
+  <!-- Central flow arrow -->
+  <path d="M 250 1060 L 680 400 L 920 400 L 1350 1060" stroke="#ffffff" stroke-width="3" stroke-dasharray="8" marker-end="url(#neonArrow)" opacity="0.3"/>
+  
+  <!-- Mathematical formulas banner -->
+  <g transform="translate(800, 1050)">
+    <text x="0" y="0" font-family="'Consolas', monospace" font-size="11" fill="#6060a0" text-anchor="middle">
+      Graph Convolution: H^(l+1) = σ(D^(-1/2) A D^(-1/2) H^(l) W^(l))  |  
+      Attention: α_{ij} = exp(LeakyReLU(a^T[Wh_i||Wh_j])) / Σ_k exp(...)  |  
+      Causal Effect: ACE = E[Y|do(X=1)] - E[Y|do(X=0)]  |  
+      Pareto Optimality: ∇f₁(x*) = λ∇f₂(x*)
+    </text>
+  </g>
+  
+  <!-- Bottom tagline -->
+  <text x="800" y="1150" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#8080ff" text-anchor="middle">
+    Powered by TensorFlow • PyTorch • Neo4j GNN • Scikit-learn • PyMC
+  </text>
+</svg>
