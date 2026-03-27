@@ -1,0 +1,48 @@
+{
+  "name": "reposentinel",
+  "version": "0.1.0",
+  "description": "Autonomous AI codebase guardian - watches your repo, finds problems, opens PRs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "dev:github-app": "pnpm --filter @reposentinel/github-app dev",
+    "dev:dashboard": "pnpm --filter @reposentinel/dashboard dev",
+    "dev:orchestrator": "pnpm --filter @reposentinel/orchestrator dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "test:e2e": "pnpm --filter @reposentinel/test-e2e test",
+    "infra:up": "docker compose -f infra/docker-compose.yml up -d",
+    "infra:down": "docker compose -f infra/docker-compose.yml down",
+    "infra:logs": "docker compose -f infra/docker-compose.yml logs -f",
+    "brain:rebuild": "pnpm --filter @reposentinel/brain-indexer rebuild",
+    "cli": "pnpm --filter @reposentinel/cli start"
+  },
+  "keywords": [
+    "ai",
+    "code-review",
+    "security",
+    "autonomous-agent",
+    "github",
+    "devops",
+    "code-quality",
+    "refactoring"
+  ],
+  "author": "Amith Kumar",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "prettier": "^3.2.5",
+    "eslint": "^8.57.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ]
+}

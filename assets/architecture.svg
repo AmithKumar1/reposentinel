@@ -1,0 +1,307 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="agentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <linearGradient id="securityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#f87171"/>
+    </linearGradient>
+    <linearGradient id="perfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="refactorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="1400" height="900" fill="url(#grid)"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="700" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="32" font-weight="bold" fill="#f1f5f9" text-anchor="middle">
+    🎯 RepoSentinel Architecture
+  </text>
+  <text x="700" y="80" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">
+    Autonomous AI Codebase Guardian with Persistent Memory
+  </text>
+  
+  <!-- GitHub Cloud -->
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="400" height="200" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="200" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#f1f5f9" text-anchor="middle">
+      ☁️ GitHub
+    </text>
+    
+    <!-- Webhooks -->
+    <g transform="translate(30, 60)">
+      <rect x="0" y="0" width="100" height="50" rx="8" fill="#334155"/>
+      <text x="50" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#f1f5f9" text-anchor="middle">push</text>
+    </g>
+    <g transform="translate(150, 60)">
+      <rect x="0" y="0" width="100" height="50" rx="8" fill="#334155"/>
+      <text x="50" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#f1f5f9" text-anchor="middle">pull_request</text>
+    </g>
+    <g transform="translate(270, 60)">
+      <rect x="0" y="0" width="100" height="50" rx="8" fill="#334155"/>
+      <text x="50" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#f1f5f9" text-anchor="middle">schedule</text>
+    </g>
+    
+    <!-- Repos -->
+    <g transform="translate(30, 130)">
+      <rect x="0" y="0" width="340" height="50" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="170" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">
+        📦 Your Codebases (TypeScript, Python, Rust, Go)
+      </text>
+    </g>
+  </g>
+  
+  <!-- GitHub App -->
+  <g transform="translate(500, 120)">
+    <rect x="0" y="0" width="350" height="200" rx="16" fill="url(#brainGrad)" filter="url(#glow)"/>
+    <text x="175" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      🤖 GitHub App (Probot)
+    </text>
+    
+    <!-- Handlers -->
+    <g transform="translate(20, 60)">
+      <rect x="0" y="0" width="145" height="40" rx="6" fill="#4f46e5"/>
+      <text x="72" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">Webhook Handlers</text>
+    </g>
+    <g transform="translate(185, 60)">
+      <rect x="0" y="0" width="145" height="40" rx="6" fill="#4f46e5"/>
+      <text x="72" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">Auth &amp; Permissions</text>
+    </g>
+    
+    <!-- Queue -->
+    <g transform="translate(20, 120)">
+      <rect x="0" y="0" width="310" height="60" rx="8" fill="#312e81"/>
+      <text x="155" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">📬 Redis Queue</text>
+      <text x="155" y="45" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#a5b4fc" text-anchor="middle">Event buffering &amp; job scheduling</text>
+    </g>
+  </g>
+  
+  <!-- Connection arrows -->
+  <path d="M 450 220 L 500 220" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Orchestrator -->
+  <g transform="translate(500, 350)">
+    <rect x="0" y="0" width="350" height="180" rx="16" fill="url(#agentGrad)" filter="url(#glow)"/>
+    <text x="175" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      🧠 Multi-Agent Orchestrator
+    </text>
+    
+    <!-- Planner -->
+    <g transform="translate(20, 55)">
+      <rect x="0" y="0" width="145" height="50" rx="8" fill="#059669"/>
+      <text x="72" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">📋 Planner Agent</text>
+      <text x="72" y="40" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#d1fae5" text-anchor="middle">Campaign strategy</text>
+    </g>
+    <g transform="translate(185, 55)">
+      <rect x="0" y="0" width="145" height="50" rx="8" fill="#059669"/>
+      <text x="72" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">🎯 Supervisor</text>
+      <text x="72" y="40" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#d1fae5" text-anchor="middle">Task routing</text>
+    </g>
+    
+    <!-- Specialist Agents -->
+    <g transform="translate(20, 120)">
+      <rect x="0" y="0" width="70" height="45" rx="6" fill="url(#securityGrad)"/>
+      <text x="35" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">🔒</text>
+      <text x="35" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Security</text>
+    </g>
+    <g transform="translate(100, 120)">
+      <rect x="0" y="0" width="70" height="45" rx="6" fill="url(#perfGrad)"/>
+      <text x="35" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">⚡</text>
+      <text x="35" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Performance</text>
+    </g>
+    <g transform="translate(180, 120)">
+      <rect x="0" y="0" width="70" height="45" rx="6" fill="url(#refactorGrad)"/>
+      <text x="35" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">🔧</text>
+      <text x="35" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Refactor</text>
+    </g>
+    <g transform="translate(260, 120)">
+      <rect x="0" y="0" width="70" height="45" rx="6" fill="#8b5cf6"/>
+      <text x="35" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">📝</text>
+      <text x="35" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Docs</text>
+    </g>
+  </g>
+  
+  <!-- Brain Services -->
+  <g transform="translate(900, 120)">
+    <rect x="0" y="0" width="450" height="410" rx="16" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <text x="225" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#f1f5f9" text-anchor="middle">
+      🧠 Persistent Brain
+    </text>
+    
+    <!-- Neo4j -->
+    <g transform="translate(25, 60)">
+      <rect x="0" y="0" width="180" height="90" rx="10" fill="#0f172a" stroke="#6366f1" stroke-width="2"/>
+      <text x="90" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">🕸️ Neo4j</text>
+      <text x="90" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Knowledge Graph</text>
+      <text x="90" y="68" font-family="'Consolas', monospace" font-size="9" fill="#64748b" text-anchor="middle">File → Module → Function</text>
+    </g>
+    
+    <!-- Qdrant -->
+    <g transform="translate(225, 60)">
+      <rect x="0" y="0" width="180" height="90" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+      <text x="90" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">🔵 Qdrant</text>
+      <text x="90" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Vector Database</text>
+      <text x="90" y="68" font-family="'Consolas', monospace" font-size="9" fill="#64748b" text-anchor="middle">Code Embeddings</text>
+    </g>
+    
+    <!-- ClickHouse -->
+    <g transform="translate(25, 170)">
+      <rect x="0" y="0" width="180" height="90" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+      <text x="90" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">📊 ClickHouse</text>
+      <text x="90" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Time-Series Store</text>
+      <text x="90" y="68" font-family="'Consolas', monospace" font-size="9" fill="#64748b" text-anchor="middle">Health Metrics Over Time</text>
+    </g>
+    
+    <!-- Brain Indexer -->
+    <g transform="translate(225, 170)">
+      <rect x="0" y="0" width="180" height="90" rx="10" fill="url(#brainGrad)"/>
+      <text x="90" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">🔍 Brain Indexer</text>
+      <text x="90" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#e0e7ff" text-anchor="middle">Tree-sitter + ts-morph</text>
+      <text x="90" y="68" font-family="'Consolas', monospace" font-size="9" fill="#c7d2fe" text-anchor="middle">AST → Graph + Embeddings</text>
+    </g>
+    
+    <!-- Preference Model -->
+    <g transform="translate(25, 280)">
+      <rect x="0" y="0" width="380" height="110" rx="10" fill="#0f172a" stroke="#8b5cf6" stroke-width="2"/>
+      <text x="190" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold" fill="#8b5cf6" text-anchor="middle">🎓 Preference Learning Model</text>
+      <text x="190" y="55" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Learns team's code style from PR feedback</text>
+      <text x="190" y="75" font-family="'Consolas', monospace" font-size="9" fill="#64748b" text-anchor="middle">Accept/Reject/Edit → Few-shot examples for future prompts</text>
+      <text x="190" y="95" font-family="'Consolas', monospace" font-size="9" fill="#64748b" text-anchor="middle">Continuous improvement loop</text>
+    </g>
+  </g>
+  
+  <!-- Connection from Orchestrator to Brain -->
+  <path d="M 850 440 L 900 440" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Execution Sandbox -->
+  <g transform="translate(500, 560)">
+    <rect x="0" y="0" width="350" height="140" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+    <text x="175" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="bold" fill="#f1f5f9" text-anchor="middle">
+      🔒 Safe Execution Sandbox
+    </text>
+    
+    <g transform="translate(20, 55)">
+      <rect x="0" y="0" width="145" height="65" rx="8" fill="#0f172a"/>
+      <text x="72" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#f1f5f9" text-anchor="middle">🐳 Docker Container</text>
+      <text x="72" y="45" font-family="'Consolas', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Isolated test execution</text>
+      <text x="72" y="60" font-family="'Consolas', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">tsc, eslint, vitest</text>
+    </g>
+    <g transform="translate(185, 55)">
+      <rect x="0" y="0" width="145" height="65" rx="8" fill="#0f172a"/>
+      <text x="72" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#f1f5f9" text-anchor="middle">✅ Validation Gate</text>
+      <text x="72" y="45" font-family="'Consolas', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Tests must pass</text>
+      <text x="72" y="60" font-family="'Consolas', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">No new errors</text>
+    </g>
+  </g>
+  
+  <!-- Dashboard -->
+  <g transform="translate(900, 560)">
+    <rect x="0" y="0" width="450" height="140" rx="16" fill="url(#refactorGrad)" filter="url(#glow)"/>
+    <text x="225" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      🎨 Mission Control Dashboard
+    </text>
+    
+    <g transform="translate(20, 55)">
+      <rect x="0" y="0" width="125" height="65" rx="8" fill="#1e40af"/>
+      <text x="62" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">📊 Health Dials</text>
+      <text x="62" y="45" font-family="'Consolas', monospace" font-size="9" fill="#bfdbfe" text-anchor="middle">Real-time metrics</text>
+      <text x="62" y="60" font-family="'Consolas', monospace" font-size="9" fill="#bfdbfe" text-anchor="middle">Trend analysis</text>
+    </g>
+    <g transform="translate(155, 55)">
+      <rect x="0" y="0" width="125" height="65" rx="8" fill="#1e40af"/>
+      <text x="62" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">🔥 Module Heatmap</text>
+      <text x="62" y="45" font-family="'Consolas', monospace" font-size="9" fill="#bfdbfe" text-anchor="middle">Risk visualization</text>
+      <text x="62" y="60" font-family="'Consolas', monospace" font-size="9" fill="#bfdbfe" text-anchor="middle">Click to drill down</text>
+    </g>
+    <g transform="translate(290, 55)">
+      <rect x="0" y="0" width="125" height="65" rx="8" fill="#1e40af"/>
+      <text x="62" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">💬 Guardian Chat</text>
+      <text x="62" y="45" font-family="'Consolas', monospace" font-size="9" fill="#bfdbfe" text-anchor="middle">Ask anything</text>
+      <text x="62" y="60" font-family="'Consolas', monospace" font-size="9" fill="#bfdbfe" text-anchor="middle">SSE streaming</text>
+    </g>
+  </g>
+  
+  <!-- Connection arrows -->
+  <path d="M 675 530 L 675 560" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 850 630 L 900 630" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- PR Output -->
+  <g transform="translate(50, 730)">
+    <rect x="0" y="0" width="400" height="140" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <text x="200" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="bold" fill="#f1f5f9" text-anchor="middle">
+      ✅ Autonomous PRs
+    </text>
+    
+    <text x="200" y="65" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">
+      Security fixes • Refactoring • Performance improvements
+    </text>
+    
+    <g transform="translate(20, 80)">
+      <rect x="0" y="0" width="360" height="45" rx="6" fill="#0f172a"/>
+      <text x="180" y="20" font-family="'Consolas', monospace" font-size="10" fill="#10b981" text-anchor="middle">
+        🔒 [Security] Fix unsafe type assertion in auth middleware
+      </text>
+      <text x="180" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">
+        Goal: Eliminate high-severity CodeQL alert • Risk: Low • Tests: ✅
+      </text>
+    </g>
+  </g>
+  
+  <!-- Flow arrows -->
+  <path d="M 450 730 L 500 730" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 500 220 L 500 350" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="4"/>
+  <path d="M 900 800 L 900 850 L 500 850 L 500 700" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="4"/>
+  
+  <!-- Legend -->
+  <g transform="translate(1000, 730)">
+    <text x="0" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9">
+      Data Flow:
+    </text>
+    <path d="M 0 20 L 100 20" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="120" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#94a3b8">Event trigger</text>
+    
+    <path d="M 0 50 L 100 50" stroke="#64748b" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrowhead)"/>
+    <text x="120" y="55" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#94a3b8">Feedback loop</text>
+  </g>
+  
+  <!-- Bottom tagline -->
+  <text x="700" y="880" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">
+    An always-on AI steward that understands your codebase like a senior staff engineer
+  </text>
+</svg>
